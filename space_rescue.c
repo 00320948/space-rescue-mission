@@ -44,6 +44,7 @@ void game(int shields, int health, int kits) {
     }
 
     status(shields, health, kits);
+printf("Score: %.0f\n",calculateScore(health, shields));
 
     printf("A = Attack, R = Repair: ");
     scanf(" %c", &choice);
