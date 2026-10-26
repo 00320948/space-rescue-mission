@@ -34,16 +34,18 @@ void status(int shields, int health, int kits) {
 
 void game(int shields, int health, int kits) {
     char choice;
-
-    if (health <= 0) {
-        printf("You win!\n");
-        return;
-    } else if (shields <= 0) {
-        printf("You lose!\n");
-        return;
-    }
-
-    status(shields, health, kits);
+if (health <= 0) {
+    printf("You win!\n");
+    printf("Final score: %.0f\n",
+           calculateScore(health, shields));
+    return;
+} else if (shields <= 0) {
+    printf("You lose!\n");
+    printf("Final score: %.0f\n",
+           calculateScore(health, shields));
+    return;
+}
+     status(shields, health, kits);
 printf("Score: %.0f\n",calculateScore(health, shields));
 
     printf("A = Attack, R = Repair: ");
