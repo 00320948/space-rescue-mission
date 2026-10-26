@@ -6,7 +6,7 @@ int attack(int health);
 int repair(int shields);
 void status(int shields, int health, int kits);
 void game(int shields, int health, int kits);
-
+double calculateScore(int health, int shields);
 int main() {
     int shields = 50;
     int health = 40;
@@ -69,4 +69,6 @@ void game(int shields, int health, int kits) {
     }
 
     game(shields, health, kits);
+    double calculateScore(int health, int shields) {
+        return health + shields;
 }
