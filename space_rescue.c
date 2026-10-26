@@ -70,6 +70,7 @@ printf("Score: %.0f\n",calculateScore(health, shields));
     }
 
     game(shields, health, kits);
+}
     double calculateScore(int health, int shields) {
         return health + shields;
 }
